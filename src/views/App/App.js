@@ -24,14 +24,15 @@ function App() {
                 value={serachTerm}
                 onChange={(e) => { setSearchTerm(e.target.value) }} />
             <div className='contact-list-container'>
+            {
+                contacts.length === 0 ? <h2 className='heading'>No contact found</h2> : null
+            }
                 {contacts.map((contact, index) => {
                     const { name, mobile } = contact;
                     return <ContactCard key={index} name={name} mobile={mobile} />
                 })}
             </div>
-            {
-                contacts.length === 0 ? <h2 className='heading'>No contact found</h2> : null
-            }
+            
         </>
     )
 }
