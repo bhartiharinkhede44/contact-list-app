@@ -25,7 +25,7 @@ function App() {
                 onChange={(e) => { setSearchTerm(e.target.value) }} />
             <div className='contact-list-container'>
             {
-                contacts.length === 0 ? <h2 className='heading'>No contact found</h2> : null
+                contacts.length === 0 ? <h2 className='heading'>Opps !Contact not found ...☹️</h2> : null
             }
                 {contacts.map((contact, index) => {
                     const { name, mobile } = contact;
